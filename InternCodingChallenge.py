@@ -2,7 +2,7 @@
 import requests
 
 # Set the request parameters
-url = 'https://dludtke.zendesk.com/api/v2/tickets.json'
+url = 'https://dludtke.zendesk.com/api/v2/tickets.json?page[size]=25'
 user = input("Enter your username: ")
 pwd = input("Enter your password: ")
 id = input("Enter ticket ID (optional): ")
@@ -28,4 +28,8 @@ else:
     #print("ID: ",id," SUBJECT: ",ticket_list[id]['subject'])
     for ticket in ticket_list:
         if ticket['id'] == int(id):
-            print("ID: ",ticket['id']," SUBJECT: ",ticket['subject'])
+            print("ID: ",ticket['id']," SUBJECT: ",ticket['subject'],"CONTENT: ",ticket['description'])
+if data['meta']['has_more']:
+    url = data['links']['next']
+else:
+    url = None
