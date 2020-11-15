@@ -1,0 +1,21 @@
+# Happy Path Testing for InternCodingChallenge
+
+# TEST 1: VIEW ALL TICKETS
+# Input Zendesk username
+# Input Zendesk password
+# Press enter
+# All tickets in the Zendesk account will display as ticket ID and ticket subject, 25 at a time 
+
+# TEST 2: VIEW A SINGLE TICKET
+# Input Zendesk username
+# Input Zendesk password
+# Enter the following ticket ID: 1
+# Press enter
+# The ticket ID 1, ticket subject, and the ticket content will display 
+
+# TEST 3: EXIT THE CLI TICKET VIEWER
+# Input Zendesk username
+# Input Zendesk password
+# Enter the following character: x
+# Press enter
+# The message "Exiting. Goodbye!" will display and the user will return to the regular CLI prompt 
